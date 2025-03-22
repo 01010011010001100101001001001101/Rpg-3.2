@@ -1,0 +1,10 @@
+Estos sprites fueron realizados en el programa Pyxel Edit 0.4.95, el programa se encuentra en la carpeta Prog_Sprites
+ y si el programa solicita licencia, deberá copiar este texto en el campo que le aparece si se lo pide:
+
+
+----BEGIN ACTIVATION KEY----
+sebas
+N3lOWE40TjROejdKamM3OU5HTlZOMk5vTjNqTTdyTnJqak5qTmFqN050TlJOME5BalhOQ2pFN09OeE5WTmI3SDd2N1E3LU5TTlhOX2pFTmw3dk41Tl83fjcxTmlqR05SN1lqYzcxTmlOS2pLN2w3ZjdsTlJONU5Qak03dzctTlNONzd1Zjg4MTE0NGM1YzcwNGM4ZTIxYTRlNGZjZjYxZjY0NTQwZTFkNDFiMjY5YzM3OGI1ZDcxN2Y0YzViMDAxNTkzNk53TjNqeE51ajdOVE41Tl9ONE5iTi1qUE5ZTn5Oak4yTkhOdk5WalZqY05MNzFqc2ozTk1OSE5PTlFOSk5QTmROVE5DTm5OSU5SanFOMmozTlZOdmp3Tn5OWE4wTlVOUk5nTlFOb05QTlVqTk5LN3lOUE56TkFqQ05+NzY3WU41TjhOOE5iamJqTU5sTjQ3d041TjdOLmpnTm9OZE5ZTm5Oak5tTjA3bE5BTjJqZU5TTm9qVGpxTjFOZk5FTlFOTA==
+----END ACTIVATION KEY----
+
+Además se adjunta al inicio otra carpeta llamada Rpg3.2_Original que es el juego original por si se necesita código o basarse en los tamaños de los sprites.

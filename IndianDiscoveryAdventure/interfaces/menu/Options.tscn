@@ -1,0 +1,294 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://interfaces/theme/fonts/ARCADECLASSIC.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://environment/tilemaps/MainMenuBase.png" type="Texture" id=2]
+[ext_resource path="res://interfaces/theme/button/focus.stylebox.tres" type="StyleBox" id=3]
+[ext_resource path="res://interfaces/theme/fonts/alertbox.normal.tres" type="DynamicFont" id=4]
+[ext_resource path="res://interfaces/theme/button/pressed.stylebox.tres" type="StyleBox" id=5]
+[ext_resource path="res://interfaces/theme/button/normal.stylebox.tres" type="StyleBox" id=6]
+[ext_resource path="res://interfaces/menu/Options.gd" type="Script" id=9]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 8.0
+expand_margin_right = 8.0
+expand_margin_top = 4.0
+expand_margin_bottom = 4.0
+anti_aliasing = false
+
+[sub_resource type="DynamicFont" id=2]
+size = 15
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="DynamicFont" id=5]
+size = 12
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[node name="Opciones" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.1376
+margin_top = 6.25682
+margin_right = 3.1376
+margin_bottom = 1.25684
+
+[node name="Bg" type="NinePatchRect" parent="."]
+margin_left = 21.0
+margin_top = -1.0
+margin_right = 478.0
+margin_bottom = 280.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Volver" type="Button" parent="Bg"]
+margin_left = 29.7671
+margin_top = 236.975
+margin_right = 77.7671
+margin_bottom = 252.975
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/normal = ExtResource( 6 )
+custom_fonts/font = SubResource( 2 )
+text = "Volver"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controles" type="Button" parent="Bg"]
+margin_left = 30.0
+margin_top = 110.774
+margin_right = 102.0
+margin_bottom = 126.774
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/normal = ExtResource( 6 )
+custom_fonts/font = SubResource( 2 )
+text = "Controles"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Audio" type="Button" parent="Bg"]
+margin_left = 30.0
+margin_top = 80.0
+margin_right = 70.0
+margin_bottom = 96.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/normal = ExtResource( 6 )
+custom_fonts/font = SubResource( 2 )
+text = "Audio"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Bg"]
+margin_left = 27.0
+margin_top = 24.0
+margin_right = 139.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 3 )
+text = "Opciones"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioPanel" type="Panel" parent="Bg"]
+visible = false
+margin_left = 170.0
+margin_top = 45.0
+margin_right = 375.0
+margin_bottom = 250.0
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicLabel" type="Label" parent="Bg/AudioPanel"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 181.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 5 )
+text = "Efectos  de  sonido  personajes"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicSlider" type="HSlider" parent="Bg/AudioPanel"]
+margin_left = 8.0
+margin_top = 25.0
+margin_right = 158.0
+margin_bottom = 41.0
+value = 80.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicValueLabel" type="Label" parent="Bg/AudioPanel"]
+margin_left = 170.0
+margin_top = 25.0
+margin_right = 210.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 5 )
+text = "80%"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AmbientLabel" type="Label" parent="Bg/AudioPanel"]
+margin_left = 8.0
+margin_top = 55.0
+margin_right = 184.0
+margin_bottom = 69.0
+custom_fonts/font = SubResource( 5 )
+text = "Musica  de  niveles  y  escenas"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AmbientSlider" type="HSlider" parent="Bg/AudioPanel"]
+margin_left = 8.0
+margin_top = 72.0
+margin_right = 158.0
+margin_bottom = 88.0
+value = 80.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AmbientValueLabel" type="Label" parent="Bg/AudioPanel"]
+margin_left = 170.0
+margin_top = 72.0
+margin_right = 210.0
+margin_bottom = 86.0
+custom_fonts/font = SubResource( 5 )
+text = "80%"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlsPanel" type="Panel" parent="Bg"]
+margin_left = 170.504
+margin_top = 45.479
+margin_right = 375.0
+margin_bottom = 250.479
+custom_styles/panel = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoveLeftLabel" type="Label" parent="Bg/ControlsPanel"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 181.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 5 )
+text = "Move Left"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoveLeftInput" type="LineEdit" parent="Bg/ControlsPanel"]
+margin_left = 8.0
+margin_top = 25.0
+margin_right = 188.0
+margin_bottom = 49.0
+custom_fonts/font = ExtResource( 4 )
+
+[node name="MoveRightLabel" type="Label" parent="Bg/ControlsPanel"]
+margin_left = 8.0
+margin_top = 54.0
+margin_right = 181.0
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 5 )
+text = "Move Right"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoveRightInput" type="LineEdit" parent="Bg/ControlsPanel"]
+margin_left = 8.0
+margin_top = 71.0
+margin_right = 188.0
+margin_bottom = 95.0
+custom_fonts/font = ExtResource( 4 )
+
+[node name="JumpLabel" type="Label" parent="Bg/ControlsPanel"]
+margin_left = 8.0
+margin_top = 97.0
+margin_right = 181.0
+margin_bottom = 111.0
+custom_fonts/font = SubResource( 5 )
+text = "Jump"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="JumpInput" type="LineEdit" parent="Bg/ControlsPanel"]
+margin_left = 8.0
+margin_top = 114.0
+margin_right = 188.0
+margin_bottom = 138.0
+custom_fonts/font = ExtResource( 4 )
+
+[node name="AttackLabel" type="Label" parent="Bg/ControlsPanel"]
+margin_left = 8.0
+margin_top = 143.0
+margin_right = 181.0
+margin_bottom = 157.0
+custom_fonts/font = SubResource( 5 )
+text = "Attack"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AttackInput" type="LineEdit" parent="Bg/ControlsPanel"]
+margin_left = 8.0
+margin_top = 160.0
+margin_right = 188.0
+margin_bottom = 184.0
+custom_fonts/font = ExtResource( 4 )
+
+[node name="ResetButton" type="Button" parent="Bg/ControlsPanel"]
+margin_left = 68.0
+margin_top = 190.0
+margin_right = 128.0
+margin_bottom = 206.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/normal = ExtResource( 6 )
+custom_fonts/font = SubResource( 2 )
+text = "Reset"
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,0 +1,124 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://interfaces/menu/Creditos.gd" type="Script" id=1]
+[ext_resource path="res://sound/music/Cancion_Creditos_1.wav" type="AudioStream" id=2]
+[ext_resource path="res://interfaces/theme/fonts/ARCADECLASSIC.TTF" type="DynamicFontData" id=3]
+[ext_resource path="res://interfaces/theme/fonts/author.dynamicfont.tres" type="DynamicFont" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 15
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 15
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[node name="Credits" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 480, 270 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 480, 270 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -40.0
+scroll_horizontal_enabled = false
+
+[node name="TextContainer" type="Label" parent="ScrollContainer"]
+margin_right = 480.0
+margin_bottom = 1377.0
+rect_min_size = Vector2( 480, 800 )
+custom_fonts/font = ExtResource( 4 )
+text = "________________________________________
+INDIAN DISCOVERY ADVENTURE
+
+Un juego de
+  Sebastian Revelo
+
+________________________________________
+
+AGRADECIMIENTOS ESPECIALES
+
+Este juego no hubiera sido posible sin el apoyo, la inspiracion y el conocimiento de muchas personas que, de una u otra forma, contribuyeron a su desarrollo.
+
+  David - Por su tutoria en PyxelEdit, ayudandome a perfeccionar mis habilidades en pixel art y brindando consejos clave en la creacion de los graficos.
+
+  Levrault - Por la inspiracion y la base proporcionada en su increible demo de Godot. Su trabajo fue un pilar fundamental en la concepcion de este proyecto.
+GitHub: Levrault Godot 2D Action Adventure
+
+  Jairo David Acosta Fernandez - Profesor de Computacion Grafica, cuya guia y ensenanzas me ayudaron a entender los principios detras de la creacion de un videojuego, desde la optimizacion de sprites hasta la estructura de un motor grafico.
+
+________________________________________
+
+SOBRE EL PROYECTO
+
+Indian Discovery Adventure es mas que un juego: es un homenaje a la riqueza cultural y mitologica andina, reinterpretada a traves del pixel art y la estetica chiptune de los clasicos de 8 bits. A lo largo de su desarrollo, este proyecto me permitio combinar programacion, arte y diseno narrativo, desafiandome a explorar cada aspecto del desarrollo de videojuegos.
+
+Desde la creacion de los sprites hasta la programacion de la jugabilidad, cada detalle fue cuidadosamente trabajado para ofrecer una experiencia inmersiva y desafiante, en la que cada nivel esconde un pedazo de historia y misticismo de los Andes.
+
+Este proyecto representa el inicio de un camino, un primer paso en el mundo del desarrollo de videojuegos, con la promesa de seguir explorando nuevas ideas, mecanicas y formas de contar historias.
+
+________________________________________
+
+DESARROLLADO CON
+
+  Godot Engine - Para dar vida a la aventura.
+  PyxelEdit - Para disenar cada pixel de este mundo.
+  Suno - Para componer una banda sonora con alma chiptune y esencia andina.
+
+________________________________________
+
+GRACIAS POR JUGAR
+
+A ti, que llegaste hasta aqui y te sumergiste en este mundo pixelado lleno de mitologia y desafio. Cada minuto que pasaste en esta aventura significa el mundo para mi.
+  Nos vemos en la proxima aventura..."
+align = 1
+autowrap = true
+
+[node name="ButtonContainer" type="HBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -35.0
+margin_bottom = -5.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SalirButton" type="Button" parent="ButtonContainer"]
+margin_left = 153.0
+margin_right = 205.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 1 )
+text = "Salir"
+flat = true
+
+[node name="MenuButton" type="Button" parent="ButtonContainer"]
+margin_left = 209.0
+margin_right = 327.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 2 )
+text = "Menu Principal"
+flat = true
+
+[node name="Ambiance" type="Node2D" parent="."]
+
+[node name="Music" type="AudioStreamPlayer2D" parent="Ambiance"]
+stream = ExtResource( 2 )
+autoplay = true
